@@ -1,0 +1,110 @@
+.price {
+    padding: 88px 0 260px;
+
+    &__container {
+    }
+
+    &__body {
+        position: relative;
+
+        &::after {
+            content: 'BELLE';
+            position: absolute;
+            top: 579px;
+            right: 0;
+            font-family: 'Felix Titling',sans-serif;
+            font-weight: 400;
+            font-size: 96px;
+            line-height: 116.666%;
+            text-transform: uppercase;
+            color: #D9D9D9;
+            opacity: 0.5;
+            -webkit-text-stroke: 1px #FFFFFF;
+            z-index: -1;
+        }
+    }
+
+    &__header {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 121.875%;
+        color: $mainTextColor;
+        margin-bottom: 34px;
+        text-align: center;
+    }
+
+    &__tab {
+        margin: 0 auto;
+        max-width: 783px;
+        max-height:537px;
+        box-shadow: 44px 57px 29px rgba(192, 155, 155, 0.01), 25px 32px 24px rgba(0, 0, 0, 0.05), 11px 14px 18px rgba(0, 0, 0, 0.09), 3px 4px 10px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        background-color: #fff;
+    }
+
+    &__tab-container {
+        display: grid;
+        grid-template-columns: 57.5% 42.5%;
+        border-bottom: 1px solid #725C4B;
+    }
+
+    &__btn {
+        padding: 16px 32px;
+        margin: 33px 0 0 215px;
+    }
+
+    &__decor-grey {
+        width: 530px;
+        height: 527px;
+        background: #D9D9D9;
+        opacity: 0.8;
+        position: absolute;
+        top: 205px;
+        left: 101px;
+        z-index: -2;
+    }
+
+    &__decor-border {
+        width: 530px;
+        height: 527px;
+        border: 1px solid #000000;
+        position: absolute;
+        top: 265px;
+        left: 141px;
+        z-index: -1;
+    }
+
+    &__top-decor {
+        position: absolute;
+        top: -122px;
+        right: 178px;
+    }
+
+    &__bottom-decor {
+        position: absolute;
+        top: 712px;
+        left: 24px;
+    }
+}
+
+.thead {
+    padding: 0 8px;
+    background: #725C4B;
+    border-radius: 1px;
+    color: #FFFFFF;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #D1CFD7;
+}
+
+.tbody {
+    padding: 0 8px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+
+    &__bgc {
+        background-color: $maincolor;
+    }
+}

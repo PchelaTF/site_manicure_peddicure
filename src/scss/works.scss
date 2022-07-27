@@ -1,0 +1,103 @@
+.work {
+    padding-bottom: 85px;
+    
+    &__bgc {
+        background: #E9E4E0;
+        padding: 69px 0 20px;
+        border-radius: 200px 0px 0px 0px;
+    }
+
+    &__container {
+    }
+
+    &__header {
+        position: relative;
+        text-align: center;
+        margin-bottom: 42px;
+
+        &:after {
+            content: 'LOVELY';
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-transform: uppercase;
+            font-family: 'Felix Titling', sans-serif;
+            font-weight: 400;
+            font-size: 96px;
+            line-height: 166.666%;
+            color: #EFEDEB;
+            opacity: 0.5;
+            -weblt-text-stroke: 1px #fff;
+
+            @media (max-width: 1170px) {
+                top: 35px;
+            }
+        }
+    }
+
+    &__header-title {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 121.875%;
+        margin-bottom: 13px;
+    }
+
+    &__header-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 11px;
+        transition: color .3s ease;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    &__slider {
+        &.swiper {
+            padding: 35px 0 85px;
+        }
+
+        .swiper-pagination {
+            bottom: 0;
+        }
+
+        .swiper-pagination-bullet {
+            width: 15px;
+            height: 15px;
+            font-size: 15px;
+            // background: #D9D9D9;
+        
+            &-active {
+                background: #725C4B;
+            }
+        }
+
+        .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+            bottom: 0;
+        }
+    }
+
+    &__slider-wrapper {
+    }
+
+    &__slider-slide {
+        padding: 10px;
+        background-color: #fff;
+    }
+}
+
+
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-pagination {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}

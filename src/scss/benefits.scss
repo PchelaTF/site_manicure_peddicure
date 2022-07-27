@@ -1,0 +1,101 @@
+.benefits {
+    padding: 90px 0 89px;
+
+    &__container {
+    }
+
+    &__body {
+        display: flex;
+        position: relative;
+    }
+
+    &__content {
+        background: #E9E4E0;
+        border-radius: 0px 220px;
+        padding: 86px 0 93px;
+    }
+
+    &__content-header {
+        position: relative;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 122%;
+        color: $mainTextColor;
+        margin-bottom: 139px;
+        text-align: end;
+        margin-right: 43px;
+
+        & p {
+            position: absolute;
+            top: 14px;
+            right: -281px;
+            font-family: 'Felix Titling', sans-serif;
+            font-weight: 400;
+            font-size: 96px;
+            line-height: 116.666%;
+            color: #F5F5F5;
+            opacity: 0.5;
+            -webkit-text-stroke: 1px #fff;
+        }
+
+        & span {
+            color: #E9E4E0;
+            -webkit-text-stroke: 0px;
+        }
+    }
+
+    &__content-cadrs {
+        display: flex;
+        align-items: center;
+        max-width: 477px;
+        margin-left: 102px;
+        margin-right: 296px;
+        min-height: 150px;
+
+        &:not(:last-child) {
+            margin-bottom: 70px;
+        }
+
+        @media (max-width: 1170px) {
+            max-width: 425px;
+            margin-left: 75px;
+            margin-right: 200px;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        left: 631px;
+        top: 279px;
+
+        @media (max-width: 1170px) {
+            left: 532px;
+        }
+
+        &-wrapper {
+            position: relative;
+        }
+    }
+
+    &__image-img {
+    }
+
+    &__image-decor {
+        position: absolute;
+        top: -18px;
+        right: -39px;
+    }
+}
+.card {
+
+    &__content {
+        background-color: #fff;
+        padding: 15px 15px 9px 3px;
+    }
+
+    &__content-img {
+    }
+
+    &__content-description {
+    }
+}

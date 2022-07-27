@@ -1,0 +1,250 @@
+@import "null";
+@import "fonts";
+// =================================
+$maincolor: #E9E4E0;
+$mainTextColor: #725C4B;
+// =================================
+body{
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: $mainTextColor;
+}
+
+[class*="__container"] {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @media (max-width: 1170px) {
+    max-width: 970px;
+  }
+
+  @media (max-width: 991.98px) {
+    max-width: 750px;
+  }
+
+  @media (max-width: 767.98px) {
+    max-width: none;
+  }
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  > main {
+    flex: 1 1 auto;
+  }
+
+  > * {
+    min-width: 0;
+  }
+}
+
+.btn {
+  display: inline-block;
+  filter: drop-shadow(19px 14px 10px rgba(0, 0, 0, 0.01)) drop-shadow(11px 8px 8px rgba(0, 0, 0, 0.05)) drop-shadow(5px 4px 6px rgba(0, 0, 0, 0.09)) drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.1)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
+  border-radius: 26px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #FFFFFF;
+  background-color: #725c4b;
+  transition: all .3s ease;
+
+  &:hover {
+    color: #725c4b;
+    background-color: #FFFFFF;
+  }
+}
+
+.header-block {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 121.875%;
+  text-align: center
+}
+// =================================
+@import 'header';
+// =================================
+// ============MAIN SCREEN=====================
+.main {
+  // position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+
+  &__container {
+    position: relative;
+    min-height: 100vh;
+    padding: 160px 15px 91px;
+  }
+
+  &__screen {
+    flex: 1 0 100%;
+    background-color: $maincolor;
+    min-height: 100%;
+  }
+
+  &__screen-decor {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+
+    &.md {
+      right: -110px;
+    }
+
+    &.hs {
+      right: -93px;
+    }
+  }
+
+  &__header {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-bottom: 109px;
+    text-align: center;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__header-logo {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__header-name {
+    margin-bottom: 6px;
+  }
+
+  &__header-prof {
+  }
+
+  &__content {
+    position: relative;
+    left: 0;
+    z-index: 10;
+    margin-bottom: 98px;
+  }
+
+  &__content-title {
+    font-family: 'Felix Titling', sans-serif;
+    font-weight: 400;
+    font-size: 90px;
+    line-height: 116.666%;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px #FFFFFF;
+
+    & span {
+      margin-left: 214px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    } 
+  }
+
+  &__content-subtitle {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    color: #FFFFFF;
+    margin-left: 214px;
+
+    &:not(:last-child) {
+      margin-bottom: 86px;
+    } 
+  }
+
+  &__content-btn {
+    padding: 16px 30px;
+    margin-left: 214px;
+  }
+
+  &__footer {
+    position: relative;
+    left: 0;
+    display: flex;
+    gap: 125px;
+    z-index: 10;
+  }
+
+  &__footer-link {
+    display: flex;
+    align-items: center;
+    color: $mainTextColor;
+    text-transform: uppercase;
+    transition: color .3s ease;
+
+    & img {
+      margin-right: 8px;
+    }
+
+    &:hover {
+      color: #FFFFFF;
+    }
+  }
+}
+// =================================
+@import 'about';
+// =================================
+@import 'benefits';
+// =================================
+@import 'price';
+// =================================
+@import 'works';
+// =================================
+@import 'reviews';
+// =================================
+@import 'callback';
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  display: none;
+}
+
+
+.footer {
+  padding: 48px 0 46px;
+  background-color: $maincolor;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 11px;
+
+    &-link {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color .3s ease;
+
+      &:hover {
+        color: #FFFFFF;
+      }
+    }
+  }
+}
