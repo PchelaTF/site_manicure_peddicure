@@ -42,6 +42,19 @@
                 background: #725C4B;
             }
         }
+
+        .swiper-button-next, .swiper-button-prev {
+            width: 43px;
+            transform: translate(0, -50%);
+        }
+
+        .swiper-button-next {
+            right: 0;
+        }
+
+        .swiper-button-prev {
+            left: 0;
+        }
     }
 
     &__slider-wrapper {
@@ -52,6 +65,8 @@
     }
 
     &__slider-slide {
+        display: flex;
+        justify-content: center;
     }
 
     &__decor {
@@ -69,6 +84,7 @@
 .slide {
 
     &__body {
+        flex: 0 0 50%;
         display: flex;
         position: relative;
     }

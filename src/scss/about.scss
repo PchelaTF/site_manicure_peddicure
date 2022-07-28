@@ -89,7 +89,7 @@
     }
 
     &__content {
-        padding-top: 94px;
+        padding-top: 50px;
     }
 
     &__content-title {
@@ -99,7 +99,7 @@
         color: $mainTextColor;
 
         &:not(:last-child) {
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
     }

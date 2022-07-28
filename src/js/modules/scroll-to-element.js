@@ -3,7 +3,8 @@ export const scrollToElement = params => {
     const links = document.querySelectorAll(params.selector);
     // добавляем им событие и функцию
     links.forEach(link => link.addEventListener('click', gotoElement));
-    // функция которая будет осуществлять задусанное
+
+    // функция которая будет осуществлять задуманное
     function gotoElement(e) {
         // отменяем стандартное поведение браузера
         e.preventDefault();
@@ -15,11 +16,12 @@ export const scrollToElement = params => {
             const headerHight = document.querySelector(params.headerSelector).offsetHeight;
             // элемент к которму будем скролить
             const elementGoto = document.querySelector(element.dataset.goto);
-            // положение этого элемента 
+            // положение этого элемента от верха страницы
             const elementTop = elementGoto.getBoundingClientRect().top;
 
             if (params.scrollY) {
-                const goTo = (elementTop + pageYOffset - headerHight) + params.offset;
+                // складываем в переменную сколько нужно проскролить от топа. params.offset - дополнительный отступ если нужен.
+                const goTo = (elementTop + scrollY - headerHight) + params.offset;
 
                 //  основная функция которая и производит скрол
                 window.scrollTo({
@@ -29,6 +31,7 @@ export const scrollToElement = params => {
             } else {
                 const goTo = (elementTop - headerHight) + params.offset;
 
+                //  основная функция которая и производит скрол
                 window.scrollTo({
                     top: goTo,
                     behavior: 'smooth',
