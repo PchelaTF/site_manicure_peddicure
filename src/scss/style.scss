@@ -112,6 +112,15 @@ body{
         right: -277px;
         bottom: -22px;
       }
+
+      @media (max-width: 767.98px) {
+        height: 48%;
+        right: -50px;
+      }
+
+      @media (max-width: 414.98px) {
+        height: 30%;
+      }
     }
 
     &.hs {
@@ -140,16 +149,13 @@ body{
       }
 
       @media (max-width: 414.98px) {
-        // height: 61%;
-        // right: 13px;
         height: 60%;
       }
 
-      @media (max-width: 374.98px) {
-        // height: 61%;
-        // right: 13px;
+      @media (max-height: 843.98px) {
         height: 44%;
       }
+
     }
   }
 

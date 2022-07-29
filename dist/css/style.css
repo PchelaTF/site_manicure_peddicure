@@ -1253,6 +1253,11 @@ body {
     padding: 70px 15px 0;
   }
 
+  .main__screen-decor.md {
+    height: 48%;
+    right: -50px;
+  }
+
   .main__screen-decor.hs {
     height: 96%;
     right: 49px;
@@ -1354,6 +1359,10 @@ body {
 }
 
 @media (max-width: 414.98px) {
+  .main__screen-decor.md {
+    height: 30%;
+  }
+
   .main__screen-decor.hs {
     height: 60%;
   }
@@ -1366,10 +1375,6 @@ body {
 }
 
 @media (max-width: 374.98px) {
-  .main__screen-decor.hs {
-    height: 44%;
-  }
-
   .main__content-title {
     text-align: center;
   }
@@ -1381,5 +1386,11 @@ body {
   .main__content-subtitle {
     margin-left: 0;
     text-align: center;
+  }
+}
+
+@media (max-height: 843.98px) {
+  .main__screen-decor.hs {
+    height: 44%;
   }
 }
