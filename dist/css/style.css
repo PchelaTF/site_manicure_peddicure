@@ -340,6 +340,7 @@ body {
 .main__content-btn {
   padding: 16px 30px;
   margin-left: 214px;
+  overflow: hidden;
 }
 
 .main__footer {
@@ -1354,7 +1355,7 @@ body {
 
 @media (max-width: 414.98px) {
   .main__screen-decor.hs {
-    height: 42%;
+    height: 60%;
   }
 }
 
@@ -1365,6 +1366,10 @@ body {
 }
 
 @media (max-width: 374.98px) {
+  .main__screen-decor.hs {
+    height: 44%;
+  }
+
   .main__content-title {
     text-align: center;
   }

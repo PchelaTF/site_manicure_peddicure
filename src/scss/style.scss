@@ -142,7 +142,13 @@ body{
       @media (max-width: 414.98px) {
         // height: 61%;
         // right: 13px;
-        height: 42%;
+        height: 60%;
+      }
+
+      @media (max-width: 374.98px) {
+        // height: 61%;
+        // right: 13px;
+        height: 44%;
       }
     }
   }
@@ -326,6 +332,7 @@ body{
   &__content-btn {
     padding: 16px 30px;
     margin-left: 214px;
+    overflow: hidden;
 
     @media (max-width: 991.98px) {
       margin-left: 0;
