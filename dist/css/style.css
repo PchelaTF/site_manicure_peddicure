@@ -1333,21 +1333,34 @@ body {
   }
 }
 
+@media (max-width: 645.98px) {
+  .main__screen-decor.hs {
+    height: 84%;
+  }
+}
+
+@media (max-width: 599.98px) {
+  .main__screen-decor.hs {
+    height: 84%;
+  }
+}
+
+@media (max-width: 591.98px) {
+  .main__screen-decor.hs {
+    right: 11px;
+    height: 76%;
+  }
+}
+
 @media (max-width: 414.98px) {
   .main__screen-decor.hs {
-    height: 61%;
-    right: 13px;
+    height: 42%;
   }
 }
 
 @media (max-width: 375.98px) {
   .main__container {
     padding: 92px 15px 0;
-  }
-
-  .main__content-btn {
-    display: flex;
-    justify-content: center;
   }
 }
 
@@ -1363,13 +1376,5 @@ body {
   .main__content-subtitle {
     margin-left: 0;
     text-align: center;
-  }
-}
-
-@media (max-height: 843.98px) {
-  .main__screen-decor.hs {
-    height: 100%;
-    right: 38px;
-    opacity: 0.3;
   }
 }

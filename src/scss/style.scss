@@ -127,17 +127,22 @@ body{
       }
 
       @media (max-width: 645.98px) {
+        height: 84%;
+      }
+      
+      @media (max-width: 599.98px) {
+        height: 84%;
+      }
+
+      @media (max-width: 591.98px) {
+        right: 11px;
+        height: 76%; 
       }
 
       @media (max-width: 414.98px) {
-        height: 61%;
-        right: 13px;
-      }
-
-      @media (max-height: 843.98px) {
-        height: 100%;
-        right: 38px;
-        opacity: 0.3;
+        // height: 61%;
+        // right: 13px;
+        height: 42%;
       }
     }
   }
@@ -327,8 +332,8 @@ body{
     }
 
     @media (max-width: 375.98px) {
-      display: flex;
-      justify-content: center;
+      // display: flex;
+      // justify-content: center;
     }
   }
 
