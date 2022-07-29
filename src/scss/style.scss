@@ -110,16 +110,14 @@ body{
 
       @media (max-width: 991.98px) {
         right: -277px;
-        bottom: -22px;
       }
 
       @media (max-width: 767.98px) {
-        height: 48%;
-        right: -50px;
+        height: 50%;
       }
 
       @media (max-width: 414.98px) {
-        height: 30%;
+        // height: 30%;
       }
     }
 
@@ -338,7 +336,6 @@ body{
   &__content-btn {
     padding: 16px 30px;
     margin-left: 214px;
-    overflow: hidden;
 
     @media (max-width: 991.98px) {
       margin-left: 0;
