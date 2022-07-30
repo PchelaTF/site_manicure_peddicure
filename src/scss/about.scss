@@ -115,6 +115,10 @@
                 color: #E7E7E7;
                 -webkit-text-stroke: 0;
             }
+
+            @media (max-width: 374.98px) {
+                left: 0;
+            }
         }
 
         &::after {
@@ -154,6 +158,10 @@
                 color: #E7E7E7;
                 -webkit-text-stroke: 0;
             }
+
+            @media (max-width: 374.98px) {
+                right: 0;
+            }
         }
     }
 
@@ -181,6 +189,10 @@
             
             @media (max-width: 767.98px) {
                 margin-bottom: 514px;
+            }
+
+            @media (max-width: 374.98px) {
+                margin-bottom: 483px;
             }
         }
 
@@ -244,6 +256,10 @@
             bottom: 179px;
             left: 9px;
             transform: rotate(298deg);
+        }
+
+        @media (max-width: 374.98px) {
+            bottom: 193px;
         }
     }
 }
