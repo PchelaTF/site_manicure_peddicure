@@ -101,6 +101,7 @@ scrollToElement({
 const modal = document.querySelector('.modal');
 const modalBtn = document.querySelectorAll('#modalBtn');
 const closeModalBtn = document.querySelector('.modal__close');
+const body = document.querySelector('body');
 
 modalBtn.forEach(btn => btn.addEventListener('click', openModal));
 closeModalBtn.addEventListener('click', closeModal);
@@ -109,10 +110,12 @@ closeModalBtn.addEventListener('click', closeModal);
 function openModal(e) {
     e.preventDefault();
     modal.classList.add('_open');
+    body.classList.add('_lock');
 }
 
 function closeModal() {
     modal.classList.remove('_open');
+    body.classList.remove('_lock');
 }
 
 const closeListener = e => {

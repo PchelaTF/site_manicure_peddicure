@@ -200,7 +200,7 @@ body._lock {
 
 .menu__link:hover {
   color: #fff;
-  background: #725C4B;
+  background: #725c4b;
   border-radius: 0px 0px 60px 60px;
 }
 
@@ -1530,7 +1530,6 @@ body._lock {
     justify-content: flex-end;
     z-index: 10;
     cursor: pointer;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
   .menu__icon::after,
@@ -1581,7 +1580,7 @@ body._lock {
     left: -100%;
     display: flex;
     flex-direction: column;
-    background: #FFFFFF;
+    background: #ffffff;
     z-index: 100;
     transition: all 0.3s ease;
   }
