@@ -95,3 +95,30 @@ scrollToElement({
     offset: 102,
     scrollY: true, // or false
 });
+
+
+// ===================================
+const modal = document.querySelector('.modal');
+const modalBtn = document.querySelectorAll('#modalBtn');
+const closeModalBtn = document.querySelector('.modal__close');
+
+modalBtn.forEach(btn => btn.addEventListener('click', openModal));
+closeModalBtn.addEventListener('click', closeModal);
+
+
+function openModal(e) {
+    e.preventDefault();
+    modal.classList.add('_open');
+}
+
+function closeModal() {
+    modal.classList.remove('_open');
+}
+
+const closeListener = e => {
+    if (e.target.dataset.close) {
+        closeModal();
+    }
+};
+
+modal.addEventListener('click', closeListener);

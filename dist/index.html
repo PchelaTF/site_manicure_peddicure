@@ -5,8 +5,8 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220731192728">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20220731192728" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20220731221053">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20220731221053" />
     <title>Manicure-Peddicure</title>
 </head>
 
@@ -107,7 +107,7 @@
                     <div class="main__content">
                         <h1 class="main__content-title">MANICURE <br> <span>PEDICURE</span></h1>
                         <p class="main__content-subtitle">м.Дніпро</p>
-                        <a href="#" class="main__content-btn btn">Записатися</a>
+                        <a href="#" class="main__content-btn btn" id="modalBtn">Записатися</a>
                     </div>
 
                     <div class="main__footer">
@@ -145,7 +145,7 @@
                         </div>
                         <div class="about__content">
                             <h2 class="about__content-title">
-                                Професійні послуги сертифікованого майстра манікюра, педикюра, дизайна 
+                                Професійні послуги сертифікованого майстра манікюра, педикюра, дизайна
                                 і моделювання нігтів
                             </h2>
                             <div class="about__content-subtitle">
@@ -261,7 +261,7 @@
                             </div>
                         </div>
 
-                        <a href="#" class="price__btn btn">Записатися</a>
+                        <a href="#" class="price__btn btn" id="modalBtn">Записатися</a>
 
                         <div class="price__decor-grey"></div>
                         <div class="price__decor-border"></div>
@@ -532,8 +532,30 @@
         <div class="footer__copy">© 2022 IRYNA SUKHARENKO</div>
     </div>
 </footer>
+
+        <div class="modal">
+            <div class="modal__body" data-close="true">
+                <div class="modal__content">
+                    <div class="modal__header">
+                        Записатися на прийом
+                    </div>
+                    <a href="#" class="modal__close">X</a>
+                    <form action="" class="modal__form">
+                        <label for="" class="modal__form-label">
+                            Заповніть форму і з вами звяжуться і уточнять час і дату прийому
+                        </label>
+                        <input type="tel" name="phone" class="modal__form-phone" id="phone"
+                            placeholder="+380(99)999 99 99" data-mask="+380(___)___ __ __" required>
+                        <input type="text" name="name" class="modal__form-name" id="name" placeholder="Ваше ім’я">
+                        <input type="text" class="modal__form-text" id="text" placeholder="Повідомлення">
+                        <button type="submit" id="button" class="modal__form-btn btn">Передзвоніть мені</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <script src="js/app.min.js?_v=20220731192728"></script>
+    <script src="js/app.min.js?_v=20220731221053"></script>
 </body>
 
 </html>
