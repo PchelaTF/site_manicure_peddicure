@@ -1,15 +1,19 @@
 @import "null";
 @import "fonts";
 // =================================
-$maincolor: #E9E4E0;
-$mainTextColor: #725C4B;
+$maincolor: #e9e4e0;
+$mainTextColor: #725c4b;
 // =================================
-body{
-  font-family: 'Montserrat';
+body {
+  font-family: "Montserrat";
   font-weight: 400;
   font-size: 16px;
   line-height: 120%;
   color: $mainTextColor;
+
+  &._lock {
+    overflow: hidden;
+  }
 }
 
 [class*="__container"] {
@@ -47,17 +51,18 @@ body{
 
 .btn {
   display: inline-block;
-  filter: drop-shadow(19px 14px 10px rgba(0, 0, 0, 0.01)) drop-shadow(11px 8px 8px rgba(0, 0, 0, 0.05)) drop-shadow(5px 4px 6px rgba(0, 0, 0, 0.09)) drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.1)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
+  // filter: drop-shadow(19px 14px 10px rgba(0, 0, 0, 0.01)) drop-shadow(11px 8px 8px rgba(0, 0, 0, 0.05)) drop-shadow(5px 4px 6px rgba(0, 0, 0, 0.09)) drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.1)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
+  box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.25);
   border-radius: 26px;
   font-weight: 700;
   letter-spacing: 0.14em;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #725c4b;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 
   &:hover {
     color: #725c4b;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
 }
 
@@ -76,9 +81,8 @@ body{
   }
 }
 
-
 // =================================
-@import 'header';
+@import "header";
 // =================================
 // ============MAIN SCREEN=====================
 .main {
@@ -146,14 +150,14 @@ body{
       @media (max-width: 645.98px) {
         height: 84%;
       }
-      
+
       @media (max-width: 599.98px) {
         height: 84%;
       }
 
       @media (max-width: 591.98px) {
         right: 11px;
-        height: 76%; 
+        height: 76%;
       }
 
       @media (max-width: 414.98px) {
@@ -163,7 +167,6 @@ body{
       @media (max-height: 668.98px) {
         height: 44%;
       }
-
     }
   }
 
@@ -180,7 +183,7 @@ body{
       margin-bottom: 65px;
     }
 
-        @media (max-width: 767.98px) {
+    @media (max-width: 767.98px) {
       margin-bottom: 52px;
     }
   }
@@ -197,12 +200,11 @@ body{
     }
 
     & img {
-
       @media (max-width: 991.98px) {
         width: 57px;
         height: 57px;
       }
-      
+
       @media (max-width: 767.98px) {
         // width: 45px;
         // height: 45px;
@@ -217,7 +219,7 @@ body{
 
   &__header-name {
     margin-bottom: 6px;
-    
+
     @media (max-width: 991.98px) {
       width: 248px;
       height: 22px;
@@ -231,7 +233,6 @@ body{
   }
 
   &__header-prof {
-
     @media (max-width: 991.98px) {
       width: 69px;
       height: 13px;
@@ -259,13 +260,13 @@ body{
   }
 
   &__content-title {
-    font-family: 'Felix Titling', sans-serif;
+    font-family: "Felix Titling", sans-serif;
     font-weight: 400;
     font-size: 90px;
     line-height: 116.666%;
-    color: #FFFFFF;
+    color: #ffffff;
     text-transform: uppercase;
-    -webkit-text-stroke: 2px #FFFFFF;
+    -webkit-text-stroke: 2px #ffffff;
 
     @media (max-width: 991.98px) {
       font-size: 64px;
@@ -275,7 +276,7 @@ body{
     @media (max-width: 767.98px) {
       font-size: 54px;
       line-height: 111.111%;
-      -webkit-text-stroke: 0.8px #FFFFFF;
+      -webkit-text-stroke: 0.8px #ffffff;
     }
 
     @media (max-width: 374.98px) {
@@ -304,14 +305,14 @@ body{
       @media (max-width: 991.98px) {
         margin-bottom: 0;
       }
-    } 
+    }
   }
 
   &__content-subtitle {
     font-weight: 700;
     font-size: 20px;
     line-height: 120%;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-left: 214px;
 
     @media (max-width: 991.98px) {
@@ -322,7 +323,7 @@ body{
       margin-left: 260px;
       font-size: 14px;
       line-height: 121.43%;
-      -webkit-text-stroke: 0.2px #FFFFFF;
+      -webkit-text-stroke: 0.2px #ffffff;
     }
 
     @media (max-width: 374.98px) {
@@ -340,7 +341,7 @@ body{
       @media (max-width: 767.98px) {
         margin-bottom: 74px;
       }
-    } 
+    }
   }
 
   &__content-btn {
@@ -386,7 +387,7 @@ body{
     align-items: center;
     color: $mainTextColor;
     text-transform: uppercase;
-    transition: color .3s ease;
+    transition: color 0.3s ease;
 
     & img {
       margin-right: 8px;
@@ -399,7 +400,6 @@ body{
     }
 
     &.whatsapp img {
-
       @media (max-width: 767.98px) {
         width: 40px;
         height: 42px;
@@ -412,14 +412,13 @@ body{
       @media (max-width: 767.98px) {
         display: flex;
       }
-      }
+    }
 
     &:hover {
-      color: #FFFFFF;
+      color: #ffffff;
     }
 
     & span {
-
       @media (max-width: 767.98px) {
         display: none;
       }
@@ -427,17 +426,17 @@ body{
   }
 }
 // =================================
-@import 'about';
+@import "about";
 // =================================
-@import 'benefits';
+@import "benefits";
 // =================================
-@import 'price';
+@import "price";
 // =================================
-@import 'works';
+@import "works";
 // =================================
-@import 'reviews';
+@import "reviews";
 // =================================
-@import 'callback';
+@import "callback";
 // =================================
-@import 'footer';
+@import "footer";
 // =================================

@@ -1,9 +1,13 @@
 import * as ptsFunctions from './modules/functions.js';
+import Swiper, { Navigation, Pagination } from 'swiper';
+import { menuBurger } from './modules/burger.js';
+import { scrollToElement } from './modules/scroll-to-element.js';
+
+// ===================================
 
 ptsFunctions.isWebp();
 
-import Swiper, { Navigation, Pagination } from 'swiper';
-import { scrollToElement } from './modules/scroll-to-element.js';
+// ===================================
 
 const workSlider = new Swiper('.work__slider', {
     slidesPerView: 1,
@@ -76,16 +80,11 @@ const sliderReviews = new Swiper('.reviews__slider', {
     },
 });
 
-
-
 // ===================================
 
-const menuIcon = document.querySelector('.menu__icon');
-const menuBurger = document.querySelector('.menu__burger');
-
-menuIcon.addEventListener('click', () => {
-    menuIcon.classList.toggle('_active');
-    menuBurger.classList.toggle('_active');
+menuBurger({
+    menuIconSelector: '.menu__icon',
+    menuBurgerSelector: '.menu__burger',
 });
 
 // ===================================
