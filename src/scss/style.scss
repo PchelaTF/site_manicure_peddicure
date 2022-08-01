@@ -4,6 +4,11 @@
 $maincolor: #e9e4e0;
 $mainTextColor: #725c4b;
 // =================================
+html._lock {
+  position: fixed;
+  height: 100vh;
+}
+
 body {
   font-family: "Montserrat";
   font-weight: 400;

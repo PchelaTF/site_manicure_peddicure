@@ -102,20 +102,27 @@ const modal = document.querySelector('.modal');
 const modalBtn = document.querySelectorAll('#modalBtn');
 const closeModalBtn = document.querySelector('.modal__close');
 const body = document.querySelector('body');
+const html = document.documentElement;
 
 modalBtn.forEach(btn => btn.addEventListener('click', openModal));
 closeModalBtn.addEventListener('click', closeModal);
 
+function preventMovingTop() {
+    html.style.marginTop = -scrollY + 'px';
+}
 
 function openModal(e) {
     e.preventDefault();
+    preventMovingTop();
     modal.classList.add('_open');
     body.classList.add('_lock');
+    html.classList.add('_lock');
 }
 
 function closeModal() {
     modal.classList.remove('_open');
     body.classList.remove('_lock');
+    html.classList.remove('_lock');
 }
 
 const closeListener = e => {

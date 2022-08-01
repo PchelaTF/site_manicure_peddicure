@@ -5,6 +5,7 @@ export const menuBurger = (params) => {
     const menuIcon = document.querySelector(params.menuIconSelector);
     const menuBurger = document.querySelector(params.menuBurgerSelector);
     const body = document.querySelector('body');
+    const html = document.documentElement;
 
     if (menuIcon) {
         menuIcon.addEventListener('click', () => {
@@ -20,6 +21,7 @@ export const menuBurger = (params) => {
         menuIcon.classList.add('_active');
         menuBurger.classList.add('_active');
         body.classList.add('_lock');
+        html.classList.add('_lock');
         console.log('MENU OPENED');
     }
 
@@ -27,6 +29,7 @@ export const menuBurger = (params) => {
         menuIcon.classList.remove('_active');
         menuBurger.classList.remove('_active');
         body.classList.remove('_lock');
+        html.classList.remove('_lock');
         console.log('MENU CLOSED');
     }
 
