@@ -1,40 +1,75 @@
-class Modal {
-    constructor(props) {
-        let defaultConfig = {
-            linkAttributeName: 'data-hystmodal',
-        };
-        this.config = Object.assign(defaultConfig, props);
-        this.init();
+export const modal = (props) => {
+    const modal = document.querySelector(props.modalSelector);
+    const modalBtn = document.querySelectorAll(props.modalBtnSelector);
+    const closeModalBtn = document.querySelector(props.closeModalBtnSelector);
+    const body = document.querySelector(props.bodySelector);
+    const header = document.querySelector(props.headerSelector);
+    let initScroll = window.innerWidth - body.offsetWidth;
+    const scrollWidtn = calcScroll();
+
+    modalBtn.forEach(btn => btn.addEventListener('click', openModal));
+    closeModalBtn.addEventListener('click', closeModal);
+
+    const definitionScrollPosition = () => window.pageYOffset;
+
+    function preventMovingTop() {
+        let scrollPosition = definitionScrollPosition();
+
+        body.style.position = 'fixed';
+        body.style.top = -scrollPosition + 'px';
+
+        if (initScroll) {
+            body.style.paddingRight = `${scrollWidtn}px`;
+            header.style.paddingRight = `${scrollWidtn}px`;
+        }
     }
 
-    init() {
-        this.isOpened = false;
-        this.openedWindow = false;
-        this._modalBlock = false;
-        this.starter = false;
-        this._nextWindows = false;
-        this._scrollPosition = 0;
+    function beforeClose() {
+        const scrollY = document.body.style.top;
 
-        this.eventsFeeler();
+        body.style.top = '';
+        body.style.position = '';
+        header.style.paddingRight = '';
+        body.style.paddingRight = '';
+
+        window.scrollTo(0, parseInt(scrollY || 0) * -1);
     }
 
-    eventsFeeler(){
-        document.addEventListener("click", function (e) {
-            const clickedlink = e.target.closest("[" + this.config.linkAttributeName + "]");
-
-            if (clickedlink) { 
-                e.preventDefault();
-                this.starter = clickedlink;
-                let targetSelector = this.starter.getAttribute(this.config.linkAttributeName);
-                this._nextWindows = document.querySelector(targetSelector);
-                this.open();
-                return;
-            }
-
-            if (e.target.closest('[data-hystclose]')) {
-                this.close();
-                return;
-            }
-        }.bind(this));
+    function openModal(e) {
+        e.preventDefault();
+        preventMovingTop();
+        body.classList.add('_lock');
+        modal.classList.add('_open');
     }
-}
+
+    function closeModal() {
+        beforeClose();
+        modal.classList.remove('_open');
+        body.classList.remove('_lock');
+    }
+
+    const closeListener = e => {
+        if (e.target.dataset.close) {
+            closeModal();
+        }
+    };
+
+    function calcScroll() {
+        let div = document.createElement('div');
+
+        div.style.width = '50px';
+        div.style.height = '50px';
+        div.style.overflowY = 'scroll';
+        div.style.visibility = 'hidden';
+
+        document.body.appendChild(div);
+
+        let scrollWidth = div.offsetWidth - div.clientWidth;
+
+        div.remove();
+
+        return scrollWidth;
+    }
+
+    modal.addEventListener('click', closeListener);
+};

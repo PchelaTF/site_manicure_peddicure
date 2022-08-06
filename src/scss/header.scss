@@ -95,7 +95,8 @@
                 width: 100%;
                 height: 10%;
                 background-color: $mainTextColor;
-                transition: scale .3s linear, transform .3s linear;
+                transition: scale 0.3s linear, transform 0.3s linear;
+                -webkit-transition: scale 0.3s linear, transform 0.3s linear;
             }
 
             &::after,
@@ -114,20 +115,24 @@
             & span {
                 top: 50%;
                 transform: scale(1) translate(0px, -50%);
+                -webkit-transform: scale(1) translate(0px, -50%);
             }
 
             &._active span {
                 transform: scale(0) translate(0px, -50%);
+                -webkit-transform: scale(0) translate(0px, -50%);
             }
 
             &._active::before {
                 top: 50%;
                 transform: rotate(-45deg) translate(0px, -50%);
+                -webkit-transform: rotate(-45deg) translate(0px, -50%);
             }
 
             &._active::after {
                 bottom: 50%;
                 transform: rotate(45deg) translate(0px, 50%);
+                -webkit-transform: rotate(45deg) translate(0px, 50%);
             }
         }
     }
@@ -142,7 +147,9 @@
             background: #ffffff;
             z-index: 100;
             transform: translate(-150%, 0);
-            transition: transform .3s linear;
+            -webkit-transform: translate(-150%, 0);
+            transition: transform 0.3s linear;
+            -webkit-transition: transform 0.3s linear;
             overflow: auto;
             height: 350px;
 

@@ -2,7 +2,7 @@ import * as ptsFunctions from './modules/functions.js';
 import Swiper, { Navigation, Pagination } from 'swiper';
 import { menuBurger } from './modules/burger.js';
 import { scrollToElement } from './modules/scroll-to-element.js';
-
+import { modal } from './modules/modal.js';
 // ===================================
 
 ptsFunctions.isWebp();
@@ -96,90 +96,12 @@ scrollToElement({
     scrollY: true, // or false
 });
 
-
 // ===================================
-const modal = document.querySelector('.modal');
-const modalBtn = document.querySelectorAll('#modalBtn');
-const closeModalBtn = document.querySelector('.modal__close');
-const body = document.querySelector('body');
-const html = document.documentElement;
-const header = document.querySelector('.header');
-let isOpened = false;
-let paddingOfSet = window.innerWidth - body.offsetWidth;
 
-const scrollWidtn = calcScroll();
-
-modalBtn.forEach(btn => btn.addEventListener('click', openModal));
-closeModalBtn.addEventListener('click', closeModal);
-
-const definitionScrollPosition = () => window.pageYOffset;
-
-function preventMovingTop() {
-    let scrollPosition = definitionScrollPosition();
-
-    body.style.position = 'fixed';
-    body.style.top = -scrollPosition + 'px';
-
-    // body.style.overflowY = 'overlay';
-
-    if (paddingOfSet) {
-        body.style.paddingRight = `${scrollWidtn}px`;
-        header.style.paddingRight = `${scrollWidtn}px`;
-        modal.style.paddingRight = `${scrollWidtn}px`;
-    }
-}
-
-function beforeClose() {
-    const scrollY = document.body.style.top;
-
-    body.style.top = '';
-    body.style.position = '';
-
-    body.style.paddingRight = '';
-    header.style.paddingRight = '';
-    modal.style.paddingRight = '';
-
-    window.scrollTo(0, parseInt(scrollY || 0) * -1);
-}
-
-function openModal(e) {
-    e.preventDefault();
-    isOpened = true;
-    preventMovingTop();
-    body.classList.add('_lock');
-    // html.classList.add('_lock');
-    modal.classList.add('_open');
-}
-
-function closeModal() {
-    isOpened = false;
-    beforeClose();
-    modal.classList.remove('_open');
-    body.classList.remove('_lock');
-    // html.classList.remove('_lock');
-}
-
-const closeListener = e => {
-    if (e.target.dataset.close) {
-        closeModal();
-    }
-};
-
-function calcScroll() {
-    let div = document.createElement('div');
-
-    div.style.width = '50px';
-    div.style.height = '50px';
-    div.style.overflowY = 'scroll';
-    div.style.visibility = 'hidden';
-
-    document.body.appendChild(div);
-
-    let scrollWidth = div.offsetWidth - div.clientWidth;
-
-    div.remove();
-
-    return scrollWidth;
-}
-
-modal.addEventListener('click', closeListener);
+modal({
+    modalSelector: '.modal',
+    modalBtnSelector: '#modalBtn',
+    closeModalBtnSelector: '.modal__close',
+    bodySelector: 'body',
+    headerSelector: '.header',
+});
