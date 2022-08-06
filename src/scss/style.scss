@@ -112,6 +112,10 @@ body {
     @media (max-width: 375.98px) {
       padding: 92px 15px 0;
     }
+
+    @media (max-height: 843.98px) {
+      padding: 52px 15px 0;
+    }
   }
 
   &__screen {
@@ -128,50 +132,68 @@ body {
     &.md {
       right: -110px;
 
-      @media (max-width: 991.98px) {
-        right: -277px;
-      }
+      // @media (max-width: 991.98px) {
+      //   right: -277px;
+      // }
+
+      // @media (max-width: 767.98px) {
+      //   height: 50%;
+      // }
 
       @media (max-width: 767.98px) {
-        height: 50%;
+        height: 32%;
+        right: 0;
       }
 
       @media (max-width: 414.98px) {
-        // height: 30%;
+        height: 30%;
+        right: -27px;
       }
     }
 
     &.hs {
       right: -93px;
 
-      @media (max-width: 991.98px) {
-        right: -30px;
+      @media (max-width: 1372px) {
+        right: 15px;
       }
+
+      // @media (max-width: 991.98px) {
+      //   right: -30px;
+      // }
+
+      // @media (max-width: 767.98px) {
+      //   height: 96%;
+      //   right: 49px;
+      // }
 
       @media (max-width: 767.98px) {
-        height: 96%;
-        right: 49px;
+        height: 65%;
       }
 
-      @media (max-width: 645.98px) {
-        height: 84%;
-      }
+      // @media (max-width: 645.98px) {
+      //   height: 84%;
+      // }
 
-      @media (max-width: 599.98px) {
-        height: 84%;
-      }
+      // @media (max-width: 599.98px) {
+      //   height: 84%;
+      // }
 
-      @media (max-width: 591.98px) {
-        right: 11px;
-        height: 76%;
-      }
+      // @media (max-width: 591.98px) {
+      //   right: 11px;
+      //   height: 76%;
+      // }
 
       @media (max-width: 414.98px) {
         height: 60%;
+        right: 15px;
       }
 
+      // @media (max-height: 668.98px) {
+      //   height: 44%;
+      // }
       @media (max-height: 668.98px) {
-        height: 44%;
+        height: 53%;
       }
     }
   }
@@ -191,6 +213,10 @@ body {
 
     @media (max-width: 767.98px) {
       margin-bottom: 52px;
+    }
+
+    @media (max-height: 568.98px) {
+      margin-bottom: 45px;
     }
   }
 
@@ -289,6 +315,16 @@ body {
       text-align: center;
     }
 
+    @media (max-height: 843.98px) {
+      font-size: 48px;
+      text-align: start;
+    }
+
+    @media (max-height: 568.98px) {
+      font-size: 37px;
+      text-align: start;
+    }
+
     & span {
       margin-left: 214px;
 
@@ -302,6 +338,10 @@ body {
 
       @media (max-width: 374.98px) {
         margin-left: 0;
+      }
+
+      @media (max-height: 843.98px) {
+        margin-left: 85px;
       }
     }
 
@@ -347,6 +387,10 @@ body {
       @media (max-width: 767.98px) {
         margin-bottom: 74px;
       }
+
+      @media (max-height: 568.98px) {
+        margin-bottom: 45px;
+      }
     }
   }
 
@@ -358,9 +402,13 @@ body {
       margin-left: 0;
     }
 
-    @media (max-width: 375.98px) {
-      // display: flex;
-      // justify-content: center;
+    // @media (min-width: 320px) {
+    //   display: flex;
+    //   justify-content: center;
+    // }
+
+    @media (max-height: 568.98px) {
+      font-size: 13px;
     }
   }
 
@@ -399,6 +447,8 @@ body {
 
     & img {
       margin-right: 8px;
+      width: 24px;
+      height: 24px;
 
       @media (max-width: 767.98px) {
         margin-right: 0;
@@ -411,6 +461,9 @@ body {
     }
 
     &.whatsapp img {
+      width: 26px;
+      height: 27px;
+
       @media (max-width: 767.98px) {
         width: 40px;
         height: 42px;
