@@ -103,26 +103,60 @@ const modalBtn = document.querySelectorAll('#modalBtn');
 const closeModalBtn = document.querySelector('.modal__close');
 const body = document.querySelector('body');
 const html = document.documentElement;
+const header = document.querySelector('.header');
+let isOpened = false;
+let paddingOfSet = window.innerWidth - body.offsetWidth;
+
+const scrollWidtn = calcScroll();
 
 modalBtn.forEach(btn => btn.addEventListener('click', openModal));
 closeModalBtn.addEventListener('click', closeModal);
 
+const definitionScrollPosition = () => window.pageYOffset;
+
 function preventMovingTop() {
-    html.style.marginTop = -scrollY + 'px';
+    let scrollPosition = definitionScrollPosition();
+
+    body.style.position = 'fixed';
+    body.style.top = -scrollPosition + 'px';
+
+    // body.style.overflowY = 'overlay';
+
+    if (paddingOfSet) {
+        body.style.paddingRight = `${scrollWidtn}px`;
+        header.style.paddingRight = `${scrollWidtn}px`;
+        modal.style.paddingRight = `${scrollWidtn}px`;
+    }
+}
+
+function beforeClose() {
+    const scrollY = document.body.style.top;
+
+    body.style.top = '';
+    body.style.position = '';
+
+    body.style.paddingRight = '';
+    header.style.paddingRight = '';
+    modal.style.paddingRight = '';
+
+    window.scrollTo(0, parseInt(scrollY || 0) * -1);
 }
 
 function openModal(e) {
     e.preventDefault();
+    isOpened = true;
     preventMovingTop();
-    modal.classList.add('_open');
     body.classList.add('_lock');
-    html.classList.add('_lock');
+    // html.classList.add('_lock');
+    modal.classList.add('_open');
 }
 
 function closeModal() {
+    isOpened = false;
+    beforeClose();
     modal.classList.remove('_open');
     body.classList.remove('_lock');
-    html.classList.remove('_lock');
+    // html.classList.remove('_lock');
 }
 
 const closeListener = e => {
@@ -130,5 +164,22 @@ const closeListener = e => {
         closeModal();
     }
 };
+
+function calcScroll() {
+    let div = document.createElement('div');
+
+    div.style.width = '50px';
+    div.style.height = '50px';
+    div.style.overflowY = 'scroll';
+    div.style.visibility = 'hidden';
+
+    document.body.appendChild(div);
+
+    let scrollWidth = div.offsetWidth - div.clientWidth;
+
+    div.remove();
+
+    return scrollWidth;
+}
 
 modal.addEventListener('click', closeListener);
