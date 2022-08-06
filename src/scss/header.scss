@@ -48,6 +48,7 @@
         align-items: center;
         justify-content: center;
         transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
 
         &:hover {
             color: #fff;
@@ -149,12 +150,13 @@
             transform: translate(-150%, 0);
             -webkit-transform: translate(-150%, 0);
             transition: transform 0.3s linear;
-            -webkit-transition: transform 0.3s linear;
+            -webkit-transition: -webkit-transform 0.3s linear;
             overflow: auto;
-            height: 350px;
+            height: auto; //350px
 
             &._active {
                 transform: translate(0, 0);
+                -webkit-transform: translate(0, 0);
             }
         }
 
