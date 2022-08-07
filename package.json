@@ -13,7 +13,8 @@
   "dependencies": {
     "del": "^6.0.0",
     "gulp": "^4.0.2",
-    "gulp-file-include": "^2.3.0"
+    "gulp-file-include": "^2.3.0",
+    "inputmask": "^5.0.7"
   },
   "devDependencies": {
     "browser-sync": "^2.27.9",

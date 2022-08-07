@@ -79,6 +79,7 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        position: relative;
 
         @media (max-width: 991.98px) {
             margin-top: 43px;
@@ -92,11 +93,23 @@
             margin: 0;
         }
 
-        > input {
+        > input,
+        textarea {
             background: #d9d9d9;
             border: 1px solid #000000;
             padding: 10px 6px 11px 6px;
             min-width: 370px;
+            font-size: 16px;
+            line-height: 120%;
+
+            &:focus {
+                box-shadow: 0 0 0 0.2rem rgba(85, 84, 84, 0.25);
+                color: #000000;
+            }
+
+            &._error {
+                border: 1px solid red;
+            }
 
             @media (max-width: 991.98px) {
                 padding: 9px 5px 9px 5px;
@@ -116,37 +129,45 @@
                 margin-bottom: 16px;
             }
         }
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            background: rgba(252, 250, 250, 0.2) url("../img/spinner_nobgc.gif") center / 50px no-repeat;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        &._sending::after {
+            opacity: 1;
+            visibility: visible;
+        }
     }
 
     &__form-phone {
         margin-bottom: 6px;
         color: rgba(0, 0, 0, 0.4);
-
-        &:focus {
-            color: #000000;
-        }
     }
 
     &__form-name {
         margin-bottom: 6px;
         color: rgba(0, 0, 0, 0.4);
-
-        &:focus {
-            color: #000000;
-        }
     }
 
     &__form-text {
         min-height: 88px;
         color: rgba(0, 0, 0, 0.4);
         margin-bottom: 7px;
+        resize: none;
 
         @media (max-width: 991.98px) {
             margin-bottom: 24px;
-        }
-
-        &:focus {
-            color: #000000;
         }
     }
 

@@ -5,8 +5,8 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220807155101">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20220807155101" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20220807213844">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?_v=20220807213844" />
     <title>Manicure-Peddicure</title>
 </head>
 
@@ -487,13 +487,14 @@
                     </div>
 
                     <div class="callback__body">
-                        <form class="callback__form">
+                        <form action="#" id="form" class="callback__form">
                             <label>Передзвоніть мені</label>
-                            <input type="tel" name="phone" class="callback__form-phone" id="phone"
-                                placeholder="+380(99)999 99 99" data-mask="+380(___)___ __ __" required>
-                            <input type="text" name="name" class="callback__form-name" id="name"
+                            <input type="tel" name="phone" class="callback__form-phone _required _phone" id="phone"
+                                placeholder="+380(99)999 99 99">
+                            <input type="text" name="name" class="callback__form-name _required" id="name"
                                 placeholder="Ваше ім’я">
-                            <input type="text" class="callback__form-text" id="text" placeholder="Повідомлення">
+                            <textarea type="text" class="callback__form-text" id="text" name="message"
+                                placeholder="Повідомлення"></textarea>
                             <button type="submit" id="button" class="callback__form-btn btn">Передзвоніть мені</button>
                         </form>
                         <div class="callback__img">
@@ -540,14 +541,14 @@
                         Записатися на прийом
                     </div>
                     <div class="modal__close">X</div>
-                    <form action="" class="modal__form">
+                    <form action="#" id="form" class="modal__form">
                         <label for="" class="modal__form-label">
                             Заповніть форму і з вами звяжуться і уточнять час і дату прийому
                         </label>
-                        <input type="tel" name="phone" class="modal__form-phone" id="phone"
-                            placeholder="+380(99)999 99 99" data-mask="+380(___)___ __ __" required>
-                        <input type="text" name="name" class="modal__form-name" id="name" placeholder="Ваше ім’я">
-                        <input type="text" class="modal__form-text" id="text" placeholder="Повідомлення">
+                        <input type="tel" name="phone" class="modal__form-phone  _phone" id="phone"
+                            placeholder="+380(99)999 99 99" required>
+                        <input type="text" name="name" class="modal__form-name " id="name" placeholder="Ваше ім’я">
+                        <textarea type="text" class="modal__form-text" id="text" placeholder="Повідомлення"></textarea>
                         <button type="submit" id="button" class="modal__form-btn btn">Передзвоніть мені</button>
                     </form>
                 </div>
@@ -555,7 +556,7 @@
         </div>
 
     </div>
-    <script src="js/app.min.js?_v=20220807155101"></script>
+    <script src="js/app.min.js?_v=20220807213844"></script>
 </body>
 
 </html>
