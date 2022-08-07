@@ -1115,6 +1115,10 @@ body._lock {
   font-weight: 700;
 }
 
+.modal__form {
+  position: relative;
+}
+
 .modal__form > input,
 .modal__form textarea {
   background: #d9d9d9;
@@ -1130,6 +1134,30 @@ body._lock {
 .modal__form textarea:focus {
   box-shadow: 0 0 0 0.2rem rgba(85, 84, 84, 0.25);
   color: #000000;
+}
+
+.modal__form > input._error,
+.modal__form textarea._error {
+  border: 1px solid red;
+}
+
+.modal__form::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background: rgba(252, 250, 250, 0.2) url("../img/spinner_nobgc.gif") center/50px no-repeat;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal__form._sending::after {
+  opacity: 1;
+  visibility: visible;
 }
 
 .modal__form-label {

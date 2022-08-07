@@ -6,6 +6,8 @@ export const modal = (props) => {
     const header = document.querySelector(props.headerSelector);
     let initScroll = window.innerWidth - body.offsetWidth;
     const scrollWidtn = calcScroll();
+    const form = document.querySelector('#modalForm');
+    let formRequiredFilds = document.querySelectorAll('._requiredModal');
 
     modalBtn.forEach(btn => btn.addEventListener('click', openModal));
     closeModalBtn.addEventListener('click', closeModal);
@@ -46,6 +48,9 @@ export const modal = (props) => {
         beforeClose();
         modal.classList.remove('_open');
         body.classList.remove('_lock');
+        form.reset();
+        form.classList.remove('_error');
+        formRequiredFilds.forEach(field => field.classList.remove('_error'));
     }
 
     const closeListener = e => {

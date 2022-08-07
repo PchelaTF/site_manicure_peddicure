@@ -455,13 +455,14 @@
                         Записатися на прийом
                     </div>
                     <div class="modal__close">X</div>
-                    <form action="#" id="form" class="modal__form">
-                        <label for="" class="modal__form-label">
+                    <form action="#" id="modalForm" class="modal__form">
+                        <label class="modal__form-label">
                             Заповніть форму і з вами звяжуться і уточнять час і дату прийому
                         </label>
-                        <input type="tel" name="phone" class="modal__form-phone  _phone" id="phone"
-                            placeholder="+380(99)999 99 99" required>
-                        <input type="text" name="name" class="modal__form-name " id="name" placeholder="Ваше ім’я">
+                        <input type="tel" name="phone" class="modal__form-phone _phone _requiredModal" id="phone"
+                            placeholder="+380(99)999 99 99">
+                        <input type="text" name="name" class="modal__form-name _requiredModal" id="name"
+                            placeholder="Ваше ім’я">
                         <textarea type="text" class="modal__form-text" id="text" placeholder="Повідомлення"></textarea>
                         <button type="submit" id="button" class="modal__form-btn btn">Передзвоніть мені</button>
                     </form>

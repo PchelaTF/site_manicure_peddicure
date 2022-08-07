@@ -21,14 +21,14 @@ export const menuBurger = (params) => {
         menuIcon.classList.add('_active');
         menuBurger.classList.add('_active');
         body.classList.add('_lock');
-        html.style.position = 'fixed';
+        // body.style.position = 'fixed';
     }
 
     function closeMenuBurger() {
-        html.style.position = '';
+        // body.style.position = '';
+        body.classList.remove('_lock');
         menuIcon.classList.remove('_active');
         menuBurger.classList.remove('_active');
-        body.classList.remove('_lock');
     }
 
     scrollToElement({
