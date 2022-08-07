@@ -1,4 +1,5 @@
 import { scrollToElement } from "./scroll-to-element.js";
+import scrollLock from 'scroll-lock';
 
 export const menuBurger = (params) => {
 
@@ -21,16 +22,14 @@ export const menuBurger = (params) => {
         menuIcon.classList.add('_active');
         menuBurger.classList.add('_active');
         body.classList.add('_lock');
-        html.addEventListener('touchmove', e => e.preventDefault());
-        // body.style.position = 'fixed';
+        scrollLock.disablePageScroll();
     }
 
     function closeMenuBurger() {
-        // body.style.position = '';
         body.classList.remove('_lock');
         menuIcon.classList.remove('_active');
         menuBurger.classList.remove('_active');
-        html.removeEventListener('touchmove', e => e.preventDefault());
+        scrollLock.enablePageScroll();
     }
 
     scrollToElement({
