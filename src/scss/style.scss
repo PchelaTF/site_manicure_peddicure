@@ -107,15 +107,16 @@ body {
 
     @media (max-width: 767.98px) {
       padding: 70px 15px 0;
+      min-height: 896px;
     }
 
-    @media (max-width: 375.98px) {
-      padding: 92px 15px 0;
-    }
+    // @media (max-width: 375.98px) {
+    //   padding: 92px 15px 0;
+    // }
 
-    @media (max-height: 843.98px) {
-      padding: 52px 15px 0;
-    }
+    // @media (max-height: 843.98px) {
+    //   padding: 52px 15px 0;
+    // }
   }
 
   &__screen {
@@ -142,13 +143,13 @@ body {
 
       @media (max-width: 767.98px) {
         height: 32%;
-        right: 0;
+        right: -37px;
       }
 
-      @media (max-width: 414.98px) {
-        height: 30%;
-        right: -27px;
-      }
+      // @media (max-width: 414.98px) {
+      //   height: 30%;
+      //   right: -27px;
+      // }
     }
 
     &.hs {
@@ -168,7 +169,7 @@ body {
       // }
 
       @media (max-width: 767.98px) {
-        height: 65%;
+        height: 63.28%;
       }
 
       // @media (max-width: 645.98px) {
@@ -184,17 +185,16 @@ body {
       //   height: 76%;
       // }
 
-      @media (max-width: 414.98px) {
-        height: 60%;
-        right: 15px;
+      @media (max-width: 339.98px) {
+        right: 0;
       }
 
       // @media (max-height: 668.98px) {
       //   height: 44%;
       // }
-      @media (max-height: 668.98px) {
-        height: 53%;
-      }
+      // @media (max-height: 668.98px) {
+      //   height: 53%;
+      // }
     }
   }
 
@@ -215,9 +215,13 @@ body {
       margin-bottom: 52px;
     }
 
-    @media (max-height: 568.98px) {
-      margin-bottom: 45px;
+    @media (max-width: 374.98px) {
+      margin-bottom: 65px;
     }
+
+    // @media (max-height: 568.98px) {
+    //   margin-bottom: 45px;
+    // }
   }
 
   &__header-logo {
@@ -315,15 +319,15 @@ body {
       text-align: center;
     }
 
-    @media (max-height: 843.98px) {
-      font-size: 48px;
-      text-align: start;
-    }
+    // @media (max-height: 843.98px) {
+    //   font-size: 48px;
+    //   text-align: start;
+    // }
 
-    @media (max-height: 568.98px) {
-      font-size: 37px;
-      text-align: start;
-    }
+    // @media (max-height: 568.98px) {
+    //   font-size: 37px;
+    //   text-align: start;
+    // }
 
     & span {
       margin-left: 214px;
@@ -340,9 +344,9 @@ body {
         margin-left: 0;
       }
 
-      @media (max-height: 843.98px) {
-        margin-left: 85px;
-      }
+      // @media (max-height: 843.98px) {
+      //   margin-left: 85px;
+      // }
     }
 
     &:not(:last-child) {
@@ -388,9 +392,9 @@ body {
         margin-bottom: 74px;
       }
 
-      @media (max-height: 568.98px) {
-        margin-bottom: 45px;
-      }
+      // @media (max-height: 568.98px) {
+      //   margin-bottom: 45px;
+      // }
     }
   }
 
