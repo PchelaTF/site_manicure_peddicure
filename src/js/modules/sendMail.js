@@ -6,11 +6,6 @@ export const sendFormData = (props) => {
     const inputTelMask = new Inputmask('+38 (999) 999-99-99');
     inputTelMask.mask(telSelector);
     form.addEventListener('submit', sendForm);
-    // form.addEventListener('submit', (e) => {
-    //     e.preventDefault();
-    //     telTest();
-    //     sendForm();
-    // });
 
     async function sendForm(e) {
         e.preventDefault();
@@ -31,7 +26,7 @@ export const sendFormData = (props) => {
                 form.reset();
                 form.classList.remove('_sending');
             } else {
-                alert("Ошибка");
+                alert("Помилка");
                 form.classList.remove('_sending');
             }
         } else {

@@ -12,7 +12,7 @@ global.app = {
     path: path,
     gulp: gulp,
     plugins: plugins
-}
+};
 // импорт задач
 import { copy } from "./gulp/tasks/copy.js";
 import { reset } from "./gulp/tasks/reset.js";
@@ -33,7 +33,7 @@ function watcher() {
     gulp.watch(path.watch.images, images);
 }
 
-export { svgSprive }
+export { svgSprive };
 
 //последовательная обработка шрифтов
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
@@ -43,7 +43,7 @@ const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images)
 //построение сценариев выполнения задач
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 
-// вып  олнение задачи по умолчанию
+// выполнение задачи по умолчанию
 gulp.task('default', dev);
 
 // const { src, dest } = require('gulp');

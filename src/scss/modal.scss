@@ -6,13 +6,10 @@
     left: 0;
     background-color: rgba(209, 207, 215, 0.8);
     z-index: 1000;
-
     opacity: 0;
     visibility: hidden;
-
     transition: opacity 0.3s ease, visibility 0.3s ease;
     -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
-
     padding-right: calc(17px - (100vw - 100%));
 
     @media (max-width: 767.98px) {
@@ -109,12 +106,6 @@
         text-align: center;
     }
 
-    &__form-phone {
-    }
-
-    &__form-name {
-    }
-
     &__form-text {
         min-height: 76px;
         resize: none;
@@ -124,5 +115,11 @@
         display: flex;
         margin: 19px auto auto;
         padding: 13px 35px;
+        font-size: 16px;
+        line-height: 120%;
+
+        @media (max-width: 374.98px) {
+            font-size: 15px;
+        }
     }
 }

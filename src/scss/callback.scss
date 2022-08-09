@@ -172,12 +172,15 @@
     }
 
     &__form-btn {
-        padding: 16px 60px;
+        max-width: 318px;
+        padding: 16px 58px;
         font-size: 16px;
         line-height: 120%;
 
         @media (max-width: 767.98px) {
-            padding: 12px 36px;
+            padding: 12px 35px;
+            max-width: 273px;
+            align-self: center;
         }
     }
 
@@ -200,7 +203,7 @@
             @media (max-width: 767.98px) {
                 display: block;
                 position: absolute;
-                left: 0;
+                left: -15px;
                 top: 10%;
                 width: 212px !important;
                 height: 103px !important;

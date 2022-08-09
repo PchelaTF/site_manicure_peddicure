@@ -64,6 +64,7 @@ const sliderReviews = new Swiper('.reviews__slider', {
             slidesPerView: 2,
             slidesPerGroup: 2,
             spaceBetween: 34,
+            slidesOffsetBefore: 23,
         },
         767.98: {
             slidesPerView: 1,
