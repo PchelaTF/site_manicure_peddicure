@@ -58,7 +58,7 @@ const sliderReviews = new Swiper('.reviews__slider', {
         prevEl: '.swiper-button-prev',
     },
     spaceBetween: 34,
-    setWrapperSize: true,
+    // setWrapperSize: true,
     breakpoints: {
         1170: {
             slidesPerView: 2,
