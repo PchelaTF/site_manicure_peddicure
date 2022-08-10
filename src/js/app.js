@@ -102,7 +102,7 @@ scrollToElement({
 
 modal({
     modalSelector: '.modal',
-    modalBtnSelector: '#modalBtn',
+    modalBtnSelector: '.modalBtn',
     closeModalBtnSelector: '.modal__close',
     bodySelector: 'body',
     headerSelector: '.header',

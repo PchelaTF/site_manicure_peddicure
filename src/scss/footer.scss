@@ -11,6 +11,11 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 10px;
+
+        @media (max-width: 374.98px) {
+            flex-direction: column;
+            justify-content: center;
+        }
     }
 
     &__logo {
@@ -21,14 +26,15 @@
             margin-top: 10px;
         }
 
+        @media (max-width: 374.98px) {
+            align-self: center;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
         & img {
             width: 56px;
             height: 56px;
-
-            @media (max-width: 767.98px) {
-                width: 34px;
-                height: 34px;
-            }
         }
     }
 
@@ -37,6 +43,10 @@
         flex-direction: column;
         justify-content: center;
         gap: 11px;
+
+        @media (max-width: 374.98px) {
+            align-items: center;
+        }
 
         &-link {
             display: flex;
@@ -48,12 +58,26 @@
             }
         }
 
+        &-email {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
         > a {
             transition: color 0.3s ease;
             -webkit-transition: color 0.3s ease;
 
             &:hover {
                 color: #ffffff;
+            }
+
+            > img {
+                margin-right: 8px;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             }
         }
     }
@@ -63,6 +87,10 @@
 
         @media (max-width: 991.98px) {
             font-size: 12px;
+        }
+
+        @media (max-width: 374.98px) {
+            text-align: center;
         }
     }
 }

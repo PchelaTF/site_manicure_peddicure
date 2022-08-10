@@ -235,10 +235,24 @@ body._lock {
   align-items: center;
 }
 
+.info__worktime img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 .info__phone {
   display: flex;
   align-items: center;
   transition: color 0.3s ease;
+}
+
+.info__phone img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .info__phone:hover {
@@ -366,15 +380,16 @@ body._lock {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.main__footer-link img {
-  margin-right: 8px;
-  width: 24px;
-  height: 24px;
+.main__footer-link:hover {
+  color: #fff;
 }
 
-.main__footer-link.whatsapp img {
-  width: 26px;
-  height: 27px;
+.main__footer-link img {
+  margin-right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .main__footer-link.phone {
@@ -1066,6 +1081,12 @@ body._lock {
   color: #ffffff;
 }
 
+.footer__contacts-email {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
 .footer__contacts > a {
   transition: color 0.3s ease;
   -webkit-transition: color 0.3s ease;
@@ -1073,6 +1094,14 @@ body._lock {
 
 .footer__contacts > a:hover {
   color: #ffffff;
+}
+
+.footer__contacts > a > img {
+  margin-right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .footer__copy {
@@ -1783,17 +1812,12 @@ body._lock {
 
   .main__footer-link img {
     margin-right: 0;
-    width: 36px;
-    height: 36px;
+    width: 33px;
+    height: 33px;
   }
 
   .main__footer-link img:not(:last-child) {
     margin-bottom: 18px;
-  }
-
-  .main__footer-link.whatsapp img {
-    width: 40px;
-    height: 42px;
   }
 
   .main__footer-link.phone {
@@ -2049,11 +2073,6 @@ body._lock {
     margin-top: 10px;
   }
 
-  .footer__logo img {
-    width: 34px;
-    height: 34px;
-  }
-
   .modal {
     padding-right: 0;
   }
@@ -2263,6 +2282,26 @@ body._lock {
 
   .callback__img-decor {
     left: -63px;
+  }
+
+  .footer__body {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer__logo {
+    -ms-grid-row-align: center;
+        align-self: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .footer__contacts {
+    align-items: center;
+  }
+
+  .footer__copy {
+    text-align: center;
   }
 
   .modal__form-btn {

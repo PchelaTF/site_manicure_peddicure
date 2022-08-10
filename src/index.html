@@ -27,7 +27,7 @@
                             <defs>
                                 <linearGradient id="paint0_linear_15_68" x1="9.39194" y1="-11.0861" x2="349.67"
                                     y2="38.8087" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#725C4B" />
+                                    <stop offset="1" stop-color="#725C4B" />
                                     <stop offset="1" stop-color="#725C4B" />
                                 </linearGradient>
                             </defs>
@@ -45,24 +45,24 @@
                     <div class="main__content">
                         <h1 class="main__content-title">MANICURE <br> <span>PEDICURE</span></h1>
                         <p class="main__content-subtitle">м.Дніпро</p>
-                        <a href="#" class="main__content-btn btn" id="modalBtn">Записатися</a>
+                        <a href="#" class="main__content-btn btn modalBtn">Записатися</a>
                     </div>
 
                     <div class="main__footer">
                         <a href="tel:+380684789939" class="main__footer-link phone">
-                            <img src="img/svgicons/header_phone.svg" alt="phone">
+                            <img src="img/svgicons/phone.svg" alt="phone">
                         </a>
                         <a href="https://www.instagram.com/_irina_dp/" class="main__footer-link" target="_blank">
                             <img src="img/svgicons/instagram.svg" alt="instagram">
-                            <span> instagram</span>
+                            <span>instagram</span>
                         </a>
                         <a href="#" class="main__footer-link">
                             <img src="img/svgicons/telegram.svg" alt="telegram">
-                            <span> telegram</span>
+                            <span>telegram</span>
                         </a>
-                        <a href="#" class="main__footer-link whatsapp">
+                        <a href="#" class="main__footer-link">
                             <img src="img/svgicons/whatsapp.svg" alt="whatsapp">
-                            <span> whatsapp</span>
+                            <span>whatsapp</span>
                         </a>
                     </div>
 
@@ -154,9 +154,9 @@
 
                     <div class="price__body">
 
-                        <div class="price__header header-block">
+                        <h2 class="price__header header-block">
                             Ціни на послуги
-                        </div>
+                        </h2>
 
                         <div class="price__tab">
                             <div class="price__tab-container">
@@ -205,7 +205,7 @@
                             </div>
                         </div>
 
-                        <a href="#" class="price__btn btn" id="modalBtn">Записатися</a>
+                        <a href="#" class="price__btn btn modalBtn">Записатися</a>
 
                         <div class="price__decor-grey"></div>
                         <div class="price__decor-border"></div>
@@ -292,10 +292,10 @@
             </section>
 
             <section class="reviews">
-                <div class="reviews__container">
-                    <div class="reviews__header header-block">
+                <h2 class="reviews__container">
+                    <h2 class="reviews__header header-block">
                         Відгуки
-                    </div>
+                    </h2>
 
                     <div class="reviews__slider swiper">
                         <div class="reviews__slider-wrapper swiper-wrapper">
@@ -420,61 +420,61 @@
                     </div>
 
                     <img src="img/svgicons/reviews_decor.svg" alt="decor" class="reviews__decor">
-                </div>
-            </section>
+    </div>
+    </section>
 
-            <section class="callback">
-                <div class="callback__container">
+    <section class="callback">
+        <div class="callback__container">
 
-                    <div class="callback__header header-block">
-                        Записатися на зворотній дзвінок
-                    </div>
+            <h2 class="callback__header header-block">
+                Записатися на зворотній дзвінок
+            </h2>
 
-                    <div class="callback__body">
-                        <form action="#" id="form" class="callback__form">
-                            <label>Передзвоніть мені</label>
-                            <input type="tel" name="phone" class="callback__form-phone _required _phone" id="phone"
-                                placeholder="+380(99)999 99 99">
-                            <input type="text" name="name" class="callback__form-name _required" id="name"
-                                placeholder="Ваше ім’я">
-                            <textarea type="text" class="callback__form-text" id="text" name="message"
-                                placeholder="Повідомлення"></textarea>
-                            <button type="submit" id="button" class="callback__form-btn btn">Передзвоніть мені</button>
-                        </form>
-                        <div class="callback__img">
-                            <img src="img/callback/callback_img.png" alt="photo">
-                            <img class="callback__img-decor" src="img/callback/decor.png" alt="decor">
-                        </div>
-                    </div>
-
-                    <img src="img/svgicons/callback_decor.svg" alt="decor" class="callback__decor">
-                </div>
-            </section>
-
-        </main>
-        @@include('html/_footer.html'{})
-
-        <div class="modal">
-            <div class="modal__body" data-close="true">
-                <div class="modal__content">
-                    <div class="modal__header">
-                        Записатися на прийом
-                    </div>
-                    <div class="modal__close">X</div>
-                    <form action="#" id="modalForm" class="modal__form">
-                        <label class="modal__form-label">
-                            Заповніть форму і з вами зв’яжуться і уточнять час і дату прийому
-                        </label>
-                        <input type="tel" name="phone" class="modal__form-phone _phone _requiredModal" id="phone"
-                            placeholder="+380(99)999 99 99">
-                        <input type="text" name="name" class="modal__form-name _requiredModal" id="name"
-                            placeholder="Ваше ім’я">
-                        <textarea type="text" class="modal__form-text" id="text" placeholder="Повідомлення"></textarea>
-                        <button type="submit" id="button" class="modal__form-btn btn">Передзвоніть мені</button>
-                    </form>
+            <div class="callback__body">
+                <form action="#" id="form" class="callback__form">
+                    <label>Передзвоніть мені</label>
+                    <input type="tel" name="phone" class="callback__form-phone _required _phone" id="phone"
+                        placeholder="+380(99)999 99 99">
+                    <input type="text" name="name" class="callback__form-name _required" id="name"
+                        placeholder="Ваше ім’я">
+                    <textarea class="callback__form-text" id="text" name="message"
+                        placeholder="Повідомлення"></textarea>
+                    <button type="submit" id="button" class="callback__form-btn btn">Передзвоніть мені</button>
+                </form>
+                <div class="callback__img">
+                    <img src="img/callback/callback_img.png" alt="photo">
+                    <img class="callback__img-decor" src="img/callback/decor.png" alt="decor">
                 </div>
             </div>
+
+            <img src="img/svgicons/callback_decor.svg" alt="decor" class="callback__decor">
         </div>
+    </section>
+
+    </main>
+    @@include('html/_footer.html'{})
+
+    <div class="modal">
+        <div class="modal__body" data-close="true">
+            <div class="modal__content">
+                <div class="modal__header">
+                    Записатися на прийом
+                </div>
+                <div class="modal__close">X</div>
+                <form action="#" id="modalForm" class="modal__form">
+                    <label class="modal__form-label">
+                        Заповніть форму і з вами зв’яжуться і уточнять час і дату прийому
+                    </label>
+                    <input type="tel" name="phone" class="modal__form-phone _phone _requiredModal" id="phoneModal"
+                        placeholder="+380(99)999 99 99">
+                    <input type="text" name="name" class="modal__form-name _requiredModal" id="nameModal"
+                        placeholder="Ваше ім’я">
+                    <textarea class="modal__form-text" id="textModal" placeholder="Повідомлення"></textarea>
+                    <button type="submit" id="buttonModal" class="modal__form-btn btn">Передзвоніть мені</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     </div>
     <script src="js/app.min.js"></script>
